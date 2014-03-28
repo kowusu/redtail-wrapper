@@ -20,6 +20,11 @@ describe RedtailWrapper::Client do
       contacts = client.get_contacts_for('Investor')
       expect(contacts).not_to be_nil
     end
+    it "should not get investor contacts" do
+      client.authenticate "#{ENV['REDTAIL_TEST_USERNAME']}", "#{ENV['REDTAIL_TEST_PASSWORD']}"
+      contacts = client.get_contacts_for(nil)
+      expect(contacts).to be_nil
+    end
   end
   
 end
