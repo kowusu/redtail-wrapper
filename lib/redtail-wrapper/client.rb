@@ -29,5 +29,8 @@ module RedtailWrapper
       @redtail_user.contacts
     end
     
+    def get_contacts_for(type)
+      @redtail_user.contacts.search_by_name(type)
+    end
   end
 end
