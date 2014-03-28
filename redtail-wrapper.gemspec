@@ -8,7 +8,13 @@ Gem::Specification.new do |g|
 
  g.summary = 'A wrapper for Redtail'
  g.files = [
+    "Gemfile",
+    "Gemfile.lock",
+    "redtail-wrapper.gemspec",
+    "README.md",
     "lib/redtail-wrapper.rb",
-    "lib/redtail-wrapper/client.rb"
+    "lib/redtail-wrapper/client.rb",
+    "spec/client_spec.rb",
+    "spec/spec_helper.rb"
  ]
 end
