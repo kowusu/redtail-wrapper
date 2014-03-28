@@ -1,11 +1,11 @@
 module RedtailWrapper
   class Client
     attr_accessor :ruby_redtail, :redtail_user
-    def initialize(env)
+    def initialize()
       self.ruby_redtail = RubyRedtail.configure do |config|
-        config.api_key = env[:api_key] #'697DC717-656C-4179-972F-4FF004E88C08'
-        config.secret_key = env[:secret_key] #'2A96B61B18664492B0E16E2480573392'
-        config.api_uri = env[:api_uri] #'http://dev.api2.redtailtechnology.com/crm/v1/rest'
+        config.api_key = "#{ENV['REDTAIL_API_KEY']}"
+        config.secret_key = "#{ENV['REDTAIL_SECRET_KEY']}"
+        config.api_uri = "#{ENV['REDTAIL_API_URI']}"
       end
     end
     
